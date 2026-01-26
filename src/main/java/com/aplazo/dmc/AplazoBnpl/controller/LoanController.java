@@ -30,4 +30,9 @@ public class LoanController {
     public ResponseEntity<LoanResponse> getLoanById(@PathVariable UUID loanId) {
         return ResponseEntity.ok(loanService.getLoanById(loanId));
     }
+
+    @GetMapping("/hello")
+    public ResponseEntity<String> sayHello() {
+        return ResponseEntity.ok("Hello from project");
+    }
 }
